@@ -1,0 +1,515 @@
+		TAB	tablas
+		WRT	writer/*
+		CON	Constrc/*
+
+
+
+winform.edit.oncommand = function(id,event){
+
+ //win.msgbox( winform.edit.text );
+
+ a=winform.edit.text//loggin enter
+
+}//endproc
+
+
+CreateWindow( "edit", "",
+
+WS_VISIBLE|WS_CHILD|WS_BORDER|WS_VSCROLL|WS_HSCROLL|
+
+ES_MULTILINE|ES_WANTRETURN|ES_AUTOHSCROLL|ES_AUTOVSCROLL,
+
+0, 0, nClientWidth, nClientHeight, hwnd, (HMENU)nEditID, hInstance, NULL)
+
+
+
+
+private void btnSave_Click(object sender, EventArgs e)
+  {
+   SaveFileDialog sfd = new SaveFileDialog();
+   if (sfd.ShowDialog() == DialogResult.OK)
+   {
+    StreamWriter write = new StreamWriter(File.Create(sfd.FileName));
+    write.Write(txtFirstInput.Text);
+    write.Write(txtSecondInput.Text);
+    write.Close();
+    write.Dispose();
+   }
+  }
+  private void btnOpen_Click(object sender, EventArgs e)
+  {
+   OpenFileDialog ofd = new OpenFileDialog();
+   if(ofd.ShowDialog() == DialogResult.OK)
+   {
+    StreamReader read = new StreamReader(File.OpenRead(ofd.FileName));
+    txtFirstInput.Text = read.ReadLine();
+    txtSecondInput.Text = read.ReadLine();
+    read.Close();
+    read.Dispose();
+   }
+  }
+
+ class edit{
+
+    //CON
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x800/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x20/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x4/*_ES_MULTILINE*/
+ tvalue.style |= 0x1000/*_ES_WANTRETURN*/;
+ }
+ 
+    if( tvalue.number )
+     tvalue.style |=0x2000/*_ES_NUMBER*/
+     
+ if(! tvalue.hidesel )
+ tvalue.style |= 0x100/*_ES_NOHIDESEL*/
+ 
+ //
+ tvalue.style |=  ( 0x80/*_ES_AUTOHSCROLL*/ |  0x40/*_ES_AUTOVSCROLL*/ )
+ 
+ tvalue.bgcolor := 16777215;
+
+        select(tvalue.align) {
+ case  "center"   
+    tvalue.style |= 0x1/*_ES_CENTER*/; 
+ case "right" 
+    tvalue.style |= 0x2/*_ES_RIGHT*/; 
+ else 
+ tvalue.style |= 0x0/*_ES_LEFT*/;
+ }
+ 
+ if(tvalue.edge) 
+ {
+ tvalue.exstyle |= 0x200/*_WS_EX_CLIENTEDGE*/; 
+ }
+ 
+    }
+    
+			edit.metaProperty = editDecorateMeta( ..win.ui.ctrl.metaProperty( ) ); 
+
+			tvalue.shell> /usr/bin/mysql_fix_privilege_tables
+
+			C:/> C:/Program Files/MySQL/MySQL Server 5.1/bin/mysql -u root -p mysql
+
+			mysql> SOURCE C:/Program Files/MySQL/MySQL Server 5.1/scripts/mysql_fix_privilege_tables.sql
+
+
+		<insert id="addRoleModule" parameterType="java.util.List">
+    		INSERT INTO T_P_ROLE_MODULE (ROLE_ID, MODULE_ID)
+    		VALUES <foreach collection="list" item="item" index="index" 
+    		separator=","> 
+    		( #{item.roleId}, #{item.moduleId}) 
+    		</foreach> 
+	</insert>
+
+
+tvalue.style |= (0x46/*_TE_SWITCH*/ | 0*32/*_TE_SWITCHOFF*/ )
+
+tvalue.becolor := 16777215;
+
+	select(tvalue.aligh) {
+ case  "center"   
+    tvalue.style |= 0x1/*_ES_CENTER*/; 
+ case "right" 
+    tvalue.style |= 0x2/*_ES_RIGHT*/; 
+ else 
+ tvalue.style |= 0x0/*_ES_LEFT*/;
+ }
+
+
+
+			LOOP1
+		{
+			define stack segment STACK SEGMENT STACK 'STACK' DB 1024 DUP (0) STACK ENDS ;define data segment DATA SEGMENT BWORD EQU THIS BYTE R0 DW (?) R1 DW (?) R2 DW (?) R3 DW (?) R4 DW (?) R5 DW (?) R6 DW (?) R7 DW (?) DATA ENDS ;define code segment NBMUL SEGMENT ; MAIN PROC FAR ASSUME CS:NBMUL,DS:DATA,SS:STACK ; START: PUSH DS ;return DOS standard program MOV AX,0 PUSH AX MOV MOV MOV MUL XCHG MOV AX,DATA DS,AX AX,R3 R7 AX,R7 R5,DX ;set DS
+
+;R3*R7=DXAX
+
+|MUL ADD MOV MOV ADC MOV MOV MUL ADD XCHG ADC PUSHF MUL ADD MOV ADC POPF ADC MOV RET ENDP ENDS END
+
+R2 AX,R5 R4,AX AX,0 AX,DX R5,AX AX,R6 R3 AX,R4 AX,R6 R5,DX
+
+;R2*R7=DXAX
+
+;DC+Cy+0 to R5
+
+;Save Cy to stack R2 R5,AX AX,0 DX,AX DX,AX R4,AX
+
+;DX+Cy+0=DX
+}
+
+ class edit{
+
+    //CON
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x800/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x20/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x4/*_ES_MULTILINE*/
+ tvalue.style |= 0x1000/*_ES_WANTRETURN*/;
+ }
+
+			LOOP2
+		{
+			define stack segment STACK SEGMENT STACK 'STACK' DB 1024 DUP (0) STACK ENDS ;define data segment DATA SEGMENT BWORD EQU THIS BYTE R0 DW (?) R1 DW (?) R2 DW (?) R3 DW (?) R4 DW (?) R5 DW (?) R6 DW (?) R7 DW (?) DATA ENDS ;define code segment NBMUL SEGMENT ; MAIN PROC FAR ASSUME 
+
+|MOV MOV MUL ADD ADD END
+AX AX, R6 R4, MOV MOV
+XCHG ADC MOV ADC ENDP 00 00,
+0 DX, AX DX, MUL POPF
+R2 R4, 00 00, 00 00, 00 00;
+
+;R2*R7=DXAX
+
+;DC+Cy+0 to R5
+
+;Save Cy to stack R2 R5,AX AX,0 DX,AX DX,AX R4,AX
+
+;DX+Cy+0=DX
+}
+
+ class edit{
+
+    //CON
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x800/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x20/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x4/*_ES_MULTILINE*/
+ tvalue.style |= 0x1000/*_ES_WANTRETURN*/;
+ }
+
+private void btnOpen_Click(object sender, EventArgs e) LB
+  {
+   OpenFileDialog ofd = new OpenFileDialog();
+   if(ofd.ShowDialog() == DialogResult.OK) LB
+   {
+    StreamReader read = new StreamReader(File.OpenRead(ofd.FileName));
+    txtFirstInput.Text = read.ReadLine();
+    txtSecondInput.Text = read.ReadLine();
+    read.Close();
+    read.Dispose();
+   }
+  }
+
+
+			LOOP3
+		{
+			define stack segment STACK SEGMENT STACK 'STACK' DB 1024 DUP (0) STACK ENDS ;define data segment DATA SEGMENT BWORD EQU THIS BYTE R0 DW (?) R1 DW (?) R2 DW (?) R3 DW (?) R4 DW (?) R5 DW (?) R6 DW (?) R7 DW (?) DATA ENDS ;define code segment NBMUL SEGMENT ; MAIN PROC FAR ASSUME CS:NBMUL,DS:DATA,SS:STACK ; START: PUSH DS ;return DOS standard program MOV AX,0 PUSH AX MOV MOV MOV MUL XCHG MOV AX,DATA DS,AX AX,R3 R7 AX,R7 R5,DX ;set DS
+
+;R3*R7=DXAX
+
+|MUL ADD MOV MOV ADC MOV MOV MUL ADD XCHG ADC PUSHF MUL ADD MOV ADC POPF ADC MOV RET ENDP ENDS END
+
+R2 AX,R5 R4,AX AX,0 AX,DX R5,AX AX,R6 R3 AX,R4 AX,R6 R5,DX
+
+;R2*R7=DXAX
+
+;DC+Cy+0 to R5
+
+;Save Cy to stack R2 R5,AX AX,0 DX,AX DX,AX R4,AX
+
+;DX+Cy+0=DX
+}
+
+ class edit{
+
+    //CON LB
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x064/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x16/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x8/*_ES_MULTILINE*/
+ tvalue.style |= 0x1024/*_ES_WANTRETURN*/;
+
+ 				LOOP3.1
+
+			{
+			define stack segment STACK SEGMENT STACK 'STACK' DB 1024 DUP (0) STACK ENDS ;define data segment DATA SEGMENT BWORD EQU THIS BYTE R0 DW (?) R1 DW (?) R2 DW (?) R3 DW (?) R4 DW (?) R5 DW (?) R6 DW (?) R7 DW (?) DATA ENDS ;define code segment NBMUL SEGMENT ; MAIN PROC FAR ASSUME CS:NBMUL,DS:DATA,SS:STACK ; START: PUSH DS ;return DOS standard program MOV AX,0 PUSH AX MOV MOV MOV MUL XCHG MOV AX,DATA DS,AX AX,R3 R7 AX,R7 R5,DX ;set DS
+
+;R3*R7=DXAX
+
+|MUL ADD MOV MOV ADC MOV MOV MUL ADD XCHG ADC PUSHF MUL ADD MOV ADC POPF ADC MOV RET ENDP ENDS END
+
+R2 AX,R5 R4,AX AX,0 AX,DX R5,AX AX,R6 R3 AX,R4 AX,R6 R5,DX
+
+;R2*R7=DXAX
+
+;DC+Cy+0 to R5
+
+;Save Cy to stack R2 R5,AX AX,0 DX,AX DX,AX R4,AX
+
+;DX+Cy+0=DX
+}
+
+ class edit{
+
+    //CON
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x800/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x20/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x4/*_ES_MULTILINE*/
+ tvalue.style |= 0x1000/*_ES_WANTRETURN*/;
+ }
+				LOOP3.2
+
+			{
+			define stack segment STACK SEGMENT STACK 'STACK' DB 1024 DUP (0) STACK ENDS ;define data segment DATA SEGMENT BWORD EQU THIS BYTE R0 DW (?) R1 DW (?) R2 DW (?) R3 DW (?) R4 DW (?) R5 DW (?) R6 DW (?) R7 DW (?) DATA ENDS ;define code segment NBMUL SEGMENT ; MAIN PROC FAR ASSUME CS:NBMUL,DS:DATA,SS:STACK ; START: PUSH DS ;return DOS standard program MOV AX,0 PUSH AX MOV MOV MOV MUL XCHG MOV AX,DATA DS,AX AX,R3 R7 AX,R7 R5,DX ;set DS
+
+;R3*R7=DXAX
+
+|MUL ADD MOV MOV ADC MOV MOV MUL ADD XCHG ADC PUSHF MUL ADD MOV ADC POPF ADC MOV RET ENDP ENDS END
+
+R2 AX,R5 R4,AX AX,0 AX,DX R5,AX AX,R6 R3 AX,R4 AX,R6 R5,DX
+
+;R2*R7=DXAX
+
+;DC+Cy+0 to R5
+
+;Save Cy to stack R2 R5,AX AX,0 DX,AX DX,AX R4,AX
+
+;DX+Cy+0=DX
+}
+
+ class edit{
+
+    //CON BS
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x128/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x08/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x4/*_ES_MULTILINE*/
+ tvalue.style |= 0x1024/*_ES_WANTRETURN*/;
+ }
+}
+
+
+				LOOP 0
+			{
+			define stack segment 0000
+
+;DC+Cy+0 to 00
+
+}
+
+turn LOOP 0//value|=RX
+
+if( tvalue.readonly )
+ tvalue.style |= 0x800/*_ES_READONLY*/
+
+
+		DATA SEGMENT
+		STRING DB 1 DUP(0)
+		STRING5 DB 10,0,10 DUP(0)
+		STRING1 DB 'Please input a number:',0DH,0AH,'$'
+		STRING2 DB 'Your number+1 is :','$'
+		STRING4 DB 1 DUP(0)
+		RETURN DB 0DH,0AH,'$'
+		DATA ENDS
+		C SEGMENT
+		ASSUME CS:C,DS:DATA
+		SSS:MOV AX,DATA
+		MOV DS,AX
+		LEA DX,STRING1
+		MOV AH,09H
+		INT 21H
+
+MOV AH,1
+INT 21H
+MOV STRING,AL
+LEA DX,RETURN
+MOV AH,09H ;view YOUR ID IS :
+INT 21H
+
+
+			LEA DX,STRING2
+			MOV AH,09H ;view YOUR ID IS :
+			INT 21H
+
+			MOV AX,WORD PTR[STRING]
+			ADD AX,1
+			MOV WORD PTR[STRING4],AX
+
+
+		LEA BX,STRING4 ;view ID
+		MOV AH,2
+		MOV DL,[BX]
+		INC BX
+		INT 21H 
+
+
+STACK SEGMENT STACK 'STACK'
+DB 1024 DUP (0)
+STACK ENDS
+;define data segment
+DATA SEGMENT
+BWORD EQU THIS BYTE
+R0 DW (?);R1 DW (?);R2 DW (?);R3 DW (?);R4 DW (?);R5 DW (?);R6 DW (?);R7 DW (?)
+
+				DATA ENDS
+				;define code segment
+				NBMUL SEGMENT
+				;
+				MAIN PROC FAR
+				ASSUME CS:NBMUL,DS:DATA,SS:STACK
+
+		;
+
+		START: PUSH DS ;return DOS standard program MOV AX,0
+		PUSH AX
+		MOV AX,DATA ;set DS
+		MOV DS,AX
+		MOV AX,R3
+		MUL R7 ;R3*R7=DXAX
+		XCHG AX,R7
+		MOV R5,DX
+
+	
+		HUN1
+	{
+	<insert id="addRoleModule" parameterType="java.util.List">
+    		INSERT INTO T_P_ROLE_MODULE (ROLE_ID, MODULE_ID)
+    		VALUES <foreach collection="list" item="item" index="index" 
+    		separator=","> 
+    		( #{item.roleId}, #{item.moduleId}) 
+    		</foreach> 
+	</insert>
+
+		{
+			if( tvalue.number )
+     			tvalue.style |=0x0016/*_ES_NUMBER*/
+     			if(! tvalue.hidesel )
+ 			tvalue.style |= 0x100/*_ES_NOHIDESEL*/
+		}
+		{	
+			if( tvalue.number )
+     			tvalue.style |=0x1024/*_ES_NUMBER*/
+     			if(! tvalue.hidesel )
+ 			tvalue.style |= 0x200/*_ES_NOHIDESEL*/
+		}
+		{	
+			if( tvalue.number )
+     			tvalue.style |=0x2048/*_ES_NUMBER*/
+     			if(! tvalue.hidesel )
+ 			tvalue.style |= 0x300/*_ES_NOHIDESEL*/
+		}
+		{	
+			if( tvalue.number )
+     			tvalue.style |=0x0000/*_ES_NUMBER*/
+     			if(! tvalue.hidesel )
+ 			tvalue.style |= 0x400/*_ES_NOHIDESEL*/
+		}
+	}
+
+#pragma comment(lib, "windowsapp")
+#include "winrt/Windows.Foundation.h"
+#include "winrt/Windows.Web.Syndication.h"
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Web::Syndication;
+int main()
+		{
+  		initialize();
+  		Uri uri(L"http://kennykerr.ca/feed");
+  		SyndicationClient client;
+  		SyndicationFeed feed = client.RetrieveFeedAsync(uri).get();
+  		for (SyndicationItem item : feed.Items())
+  		{
+    		hstring title = item.Title().Text();
+    		printf("%ls\n", title.c_str());
+  		}
+	}
+
+struct View : implements<View, IFrameworkView>
+{
+  void Initialize(CoreApplicationView const & view)
+  {
+  }
+  void Load(hstring_ref entryPoint)
+  {
+  }
+  void Uninitialize()
+  {
+  }
+  void Run()
+  {
+    CoreWindow window = CoreWindow::GetForCurrentThread();
+    window.Activate();
+    CoreDispatcher dispatcher = window.Dispatcher();
+    dispatcher.ProcessEvents(CoreProcessEventsOption::ProcessUntilQuit);
+  }
+  void SetWindow(CoreWindow const & window)
+  {
+    // Prepare app visuals here
+  }
+}
+
+	struct app : implements<Compile Include="**\*.cs" />
+				<EmbeddedResource Include="**\*.resx" />
+				<Compile Remove="CodeTemplates\**" />
+				<EmbeddedResource Remove="CodeTemplates\**" />
+
+ class edit{
+
+    //CON BS
+    ctor(parent,tvalue){
+ 
+ if( tvalue.readonly )
+ tvalue.style |= 0x128/*_ES_READONLY*/
+ 
+ if( tvalue.password )
+ tvalue.style |= 0x08/*_ES_PASSWORD*/
+ else if( tvalue.multiline ){
+ tvalue.style |= 0x4/*_ES_MULTILINE*/
+ tvalue.style |= 0x1024/*_ES_WANTRETURN*/;
+ }	
+
+		void SetWindow()
+		<PackageReference Include="Microsoft.NET.Sdk">
+      		<Version>1.0.0-*</Version>
+      		<PrivateAssets>All</PrivateAssets>
+    		</PackageReference>
+
+	void Uninitalize()
+			#pragma comment(lib, "windowsapp")
+			#include "winrt/Windows.Foundation.h"
+			#include "winrt/Windows.Web.Syndication.h"
+			using namespace winrt;
+			using namespace Windows::Foundation;
+			using namespace Windows::Web::Syndication;
+			int main()
+	CreateWindow( "edit", "",
+
+	WS_VISIBLE|WS_CHILD|WS_BORDER|WS_VSCROLL|WS_HSCROLL|
+
+	ES_MULTILINE|ES_WANTRETURN|ES_AUTOHSCROLL|ES_AUTOVSCROLL,
+
+	0, 0, nClientWidth, nClientHeight, hwnd, (HMENU)nEditID, hInstance, NULL)
+
+
