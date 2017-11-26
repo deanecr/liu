@@ -1,0 +1,35 @@
+package main
+
+import (
+	"flag"
+	"fmt"
+	"time"
+
+	"github.com/apex/log"
+	"github.com/apex/log/handlers/cli"
+	"github.com/dustin/go-humanize"
+
+	"github.com/tj/node-prune"
+)
+
+func init() {
+	log.SetHandler(cli.Default)
+	log.SetLevel(log.WarnLevel)
+}
+
+func main() {
+	debug := flag.Bool("verbose", false, "Verbose log output.")
+	flag.Parse()
+	dir := flag.Arg(0)
+
+	start := time.Now()
+
+	if *debug {
+		log.SetLevel(log.DebugLevel)
+	}
+
+	var options []prune.Option
+
+	if dir != "" {
+		options = append(options, prune.WithDir(dir))
+	}
