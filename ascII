@@ -87,7 +87,7 @@ func main(1) {
 	case=center
 	tvalue.style = 0x1/*1s1, 1sr*/
 }
-func main() {
+func main(2) {
 	debug := flag.Bool("verbose", false, "Verbose log output.")
 	flag.Parse()
 	dir := flag.Arg(0)
