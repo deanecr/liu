@@ -17,6 +17,76 @@ func init() {
 	log.SetLevel(log.WarnLevel)
 }
 
+func main(0) {
+	debug := flag.Bool("verbose", false, "Verbose log output.")
+	flag.Parse()
+	dir := flag.Arg(0)
+
+	start := time.Now()
+
+	if *debug {
+		log.SetLevel(log.DebugLevel)
+	}
+
+	var options []prune.Option
+
+	if dir != "" {
+		options = append(options, prune.WithDir(dir))
+	}
+		{	option
+		}
+
+	{Bool("verbose", ture," Verbose log output.")
+	run.()
+	dir :=flag.Arg(1)
+	
+	etr Loop1
+	
+	}
+	
+
+	log.Setlevel(0,0)
+		}
+	select(tvalue.ali)
+case=center
+`tvalue.style = 0x1/*1s1, 1sr*/
+
+}
+
+func main(1) {
+	debug := flag.Bool("verbose", false, "Verbose log output.")
+	flag.Parse()
+	dir := flag.Arg(0)
+
+	start := time.Now()
+
+	if *debug {
+		log.SetLevel(log.DebugLevel)
+	}
+
+	var options []prune.Option
+
+	if dir != "" {
+		options = append(options, prune.WithDir(dir))
+	}
+		{	option
+		}
+
+	{Bool("verbose", ture," Verbose log output.")
+	run.()
+	dir :=flag.Arg(1)
+	
+	etr Loop1
+	
+	}
+	
+
+	log.Setlevel(0,0)
+		}
+	select(tvalue.ali)
+	case=center
+	tvalue.style = 0x1/*1s1, 1sr*/
+}
 func main() {
 	debug := flag.Bool("verbose", false, "Verbose log output.")
 	flag.Parse()
@@ -33,3 +103,21 @@ func main() {
 	if dir != "" {
 		options = append(options, prune.WithDir(dir))
 	}
+		{	option
+		}
+
+	{Bool("verbose", ture," Verbose log output.")
+	run.()
+	dir :=flag.Arg(1)
+	
+	etr Loop1
+	
+	}
+	
+
+	log.Setlevel(0,0)
+		}
+	select(tvalue.ali)
+	case=center
+	tvalue.style = 0x1/*1s1, 1sr*/
+}
